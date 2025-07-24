@@ -1,0 +1,112 @@
+header {
+    background-color: #1e90ff;      /* azul */
+    color: #fff;                    /* texto branco */
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid #104e8b;      /* azul mais escuro */
+}
+
+main {
+    background-color: #f8f8ff;      /* branco gelo */
+    color: #333;                    /* texto cinza escuro */
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid #dcdcdc;      /* cinza claro */
+}
+
+footer {
+    background-color: #222;         /* quase preto */
+    color: #fff;                    /* texto branco */
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid #444;         /* cinza escuro */
+}
+
+
+/* Seleciona todas as tags <h2> */
+h2 {
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+/* Classe destaque: deixa em itálico e fundo suave */
+.destaque {
+    font-style: italic;
+    background-color: #fffbe7; /* amarelo bem claro */
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+/* ID importante: adiciona uma borda superior mais espessa */
+#importante {
+    border-top: 5px solid #e67e22; /* laranja */
+    padding-top: 10px;
+}
+
+
+/* Estrutura padrão da navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1e90ff;
+    padding: 14px 24px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+/* Hamburger escondido por padrão */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 58px;           /* ajuste conforme altura do header */
+        left: 0;
+        width: 100%;
+        background: #1e90ff;
+        flex-direction: column;
+        gap: 0;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid #ffffff33;
+        text-align: center;
+        padding: 16px 0;
+    }
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
